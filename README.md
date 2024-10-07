@@ -1,5 +1,5 @@
-# Rural land use based on Andy For'ds forest management in equilibrium
-The rural land use structure was originally developed 
+# Rural land use based on Andy Ford's forest management in equilibrium
+The rural land use structure was originally developed and documented by Hovmand et al (2015) as part of the molecules library used to teach the Winter Institute in India with Foundation for Ecological Security and based on Ford's forest management in equilibrium structure (1999, p. 57). 
 
 <img width="536" alt="image" src="https://github.com/user-attachments/assets/e0f63af0-3932-4cf0-80cc-c9dba469084a">
 
@@ -80,5 +80,29 @@ Units: Ha
 
 Units: Ha
 
+## Simulation parameters
+
+1. INITIAL TIME = 0 
+
+Units: Year
+
+2. FINAL TIME = 10 
+
+Units: Year
+
+3. TIME STEP = 1
+
+Units: Year
+
+6. SAVEPER = TIME STEP 
+
+Units: Year
+
 # References
+
+Ford, A. (1999). *Modeling the environment: an introduction to system dynamics models of environmental systems. Washington, DC: Island Press.
+
+Hovmand, Peter S., Kuhlberg, J. Brown, A., & Belsky, J. (2015). *Social System Design Lab Molecules Library Version 2.0.* Brown School Social System Design Lab, Washington University in St. Louis.
+
+
 
