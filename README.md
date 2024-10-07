@@ -100,7 +100,7 @@ Units: Year
 
 # References
 
-Ford, A. (1999). *Modeling the environment: an introduction to system dynamics models of environmental systems. Washington, DC: Island Press.
+Ford, A. (1999). *Modeling the environment: an introduction to system dynamics models of environmental systems*. Washington, DC: Island Press.
 
 Hovmand, Peter S., Kuhlberg, J. Brown, A., & Belsky, J. (2015). *Social System Design Lab Molecules Library Version 2.0.* Brown School Social System Design Lab, Washington University in St. Louis.
 
