@@ -9,7 +9,7 @@ Figure 1. Rural land use
 
 Figure 2. Baserun
 
-# Equations 
+## Equations 
 
 
 1. Cash Crops= INTEG (Converting Land from Fallow to Cash Crops + Converting Land from Food Crops to Cash Crops-Converting Land from Cash to Food Crops-Fallowing Land from Cash Crops, Initial Cash Crop Land)
