@@ -1,0 +1,215 @@
+{UTF-8}
+Cash Crops= INTEG (
+	Converting Land from Fallow to Cash Crops+Converting Land from Food Crops to Cash Crops\
+		-Converting Land from Cash to Food Crops-Fallowing Land from Cash Crops,
+		Initial Cash Crop Land)
+	~	Ha
+	~		|
+
+Cash Fallowing FR=
+	0.1
+	~	Dmnl/Year
+	~		|
+
+Cash to Food FR=
+	0.1
+	~	Dmnl/Year
+	~		|
+
+Converting Land from Cash to Food Crops=
+	Cash Crops*Cash to Food FR
+	~	Ha/Year
+	~	Rate that land gets reallocated from cash crops to food crops.
+	|
+
+Converting Land from Fallow to Cash Crops=
+	Fallow*Fallow to Cash FR
+	~	Ha/Year
+	~	Rate that fallow land gets reallocated to cash crops.
+	|
+
+Converting Land from Fallow to Food Crops=
+	Fallow*Fallow to Food FR
+	~	Ha/Year
+	~	Rate that fallow land gets reallocated to food crops
+	|
+
+Converting Land from Food Crops to Cash Crops=
+	Food Crops*Food Crops to Cash Crops FR
+	~	Ha/Year
+	~	Rate that food crops gets allocated to cash crops.
+	|
+
+Fallow= INTEG (
+	Fallowing Land from Cash Crops+Fallowing Land from Food Crops-Converting Land from Fallow to Cash Crops\
+		-Converting Land from Fallow to Food Crops,
+		Initial Fallow Land)
+	~	Ha
+	~		|
+
+Fallow to Cash FR=
+	0.1
+	~	Dmnl/Year
+	~		|
+
+Fallow to Food FR=
+	0.15
+	~	Dmnl/Year
+	~		|
+
+Fallowing Land from Cash Crops=
+	Cash Crops*Cash Fallowing FR
+	~	Ha/Year
+	~	Rate that land allocated to cash crops gets reallocated to food crops.
+	|
+
+Fallowing Land from Food Crops=
+	Food Crops*Food to Fallow FR
+	~	Ha/Year
+	~	Rate that land allocated to food crops is fallowed.
+	|
+
+Food Crops= INTEG (
+	Converting Land from Cash to Food Crops+Converting Land from Fallow to Food Crops-Converting Land from Food Crops to Cash Crops\
+		-Fallowing Land from Food Crops,
+		Initial Food Crop Land)
+	~	Ha
+	~		|
+
+Food Crops to Cash Crops FR=
+	0.1
+	~	Dmnl/Year
+	~		|
+
+Food to Fallow FR=
+	0.2
+	~	Dmnl/Year
+	~		|
+
+Initial Cash Crop Land=
+	3
+	~	Ha
+	~		|
+
+Initial Fallow Land=
+	1
+	~	Ha
+	~		|
+
+Initial Food Crop Land=
+	5
+	~	Ha
+	~		|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 10
+	~	Year
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 0
+	~	Year
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP
+	~	Year [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 1
+	~	Year [0,?]
+	~	The time step for the simulation.
+	|
+
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*View 1
+$192-192-192,0,Comic Sans MS|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|96,96,5,0
+10,1,Cash Crops,672,316,53,27,3,3,0,0,0,0,0,0
+10,2,Fallow,675,571,53,27,3,3,0,0,0,0,0,0
+10,3,Food Crops,961,317,53,27,3,3,0,0,0,0,0,0
+1,4,6,2,4,0,0,22,0,0,0,-1--1--1,,1|(672,498)|
+1,5,6,1,100,0,0,22,0,0,0,-1--1--1,,1|(672,389)|
+11,6,380,672,444,11,8,33,131,0,0,4,0,0,0
+10,7,Fallowing Land from Cash Crops,736,444,53,44,40,131,0,0,-1,0,0,0
+1,8,10,2,4,0,0,22,0,0,0,-1--1--1,,1|(929,571)|
+1,9,10,3,100,0,0,22,0,0,0,-1--1--1,,1|(929,398)|
+11,10,204,929,461,11,8,33,3,0,0,4,0,0,0
+10,11,Fallowing Land from Food Crops,1019,461,79,21,40,3,0,0,-1,0,0,0
+1,12,14,3,4,0,0,22,0,0,0,-1--1--1,,1|(874,316)|
+1,13,14,1,100,0,0,22,0,0,0,-1--1--1,,1|(775,316)|
+11,14,412,833,316,8,11,34,3,0,0,1,0,0,0
+10,15,Converting Land from Cash to Food Crops,833,361,68,35,40,131,0,0,-1,0,0,0
+1,16,18,1,4,0,0,22,0,0,0,-1--1--1,,1|(672,216)|
+1,17,18,3,100,0,0,22,0,0,0,-1--1--1,,1|(961,216)|
+11,18,188,813,216,8,11,34,3,0,0,3,0,0,0
+10,19,Converting Land from Food Crops to Cash Crops,813,184,100,21,40,3,0,0,-1,0,0,0
+1,20,22,1,4,0,0,22,0,0,0,-1--1--1,,1|(548,316)|
+1,21,22,2,100,0,0,22,0,0,0,-1--1--1,,1|(548,571)|
+11,22,172,548,447,11,8,33,3,0,0,2,0,0,0
+10,23,Converting Land from Fallow to Cash Crops,452,447,85,21,40,3,0,0,-1,0,0,0
+10,24,Initial Cash Crop Land,552,245,67,21,8,3,0,0,0,0,0,0
+10,25,Initial Food Crop Land,1148,240,67,21,8,3,0,0,0,0,0,0
+10,26,Initial Fallow Land,503,649,69,12,8,3,0,0,0,0,0,0
+1,27,24,1,0,0,0,0,0,64,1,-1--1--1,,1|(600,273)|
+1,28,26,2,0,0,0,0,0,64,1,-1--1--1,,1|(569,618)|
+1,29,25,3,0,0,0,0,0,64,1,-1--1--1,,1|(1062,275)|
+1,30,2,22,0,0,43,0,2,0,0,-1--1--1,|12||0-0-0,1|(607,504)|
+1,31,1,7,1,0,43,0,2,0,0,-1--1--1,|12||0-0-0,1|(708,371)|
+1,32,1,15,1,0,43,0,2,0,0,-1--1--1,|12||0-0-0,1|(736,363)|
+1,33,3,18,0,0,43,0,2,0,0,-1--1--1,|12||0-0-0,1|(876,258)|
+1,34,35,2,100,0,0,22,0,0,0,-1--1--1,,1|(675,679)|
+11,35,428,843,679,8,11,34,3,0,0,1,0,0,0
+10,36,Converting Land from Fallow to Food Crops,843,711,85,21,40,3,0,0,-1,0,0,0
+1,37,35,3,4,0,0,22,0,0,0,-1--1--1,,4|(1173,679)|(1173,675)|(1173,317)|(1093,317)|
+1,38,2,35,0,0,43,0,2,0,0,-1--1--1,|12||0-0-0,1|(770,632)|
+1,39,3,11,0,0,43,0,2,0,0,-1--1--1,|12||0-0-0,1|(987,385)|
+10,40,Food Crops to Cash Crops FR,1011,100,76,21,8,3,0,0,0,0,0,0
+10,41,Food to Fallow FR,1047,552,69,12,8,3,0,0,0,0,0,0
+10,42,Fallow to Food FR,988,780,69,12,8,3,0,0,0,0,0,0
+10,43,Fallow to Cash FR,417,564,68,12,8,3,0,0,0,0,0,0
+1,44,40,19,0,0,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(918,139)|
+1,45,43,23,0,0,43,0,2,0,0,-1--1--1,|12||0-0-0,1|(430,516)|
+1,46,42,36,0,0,43,0,2,0,0,-1--1--1,|12||0-0-0,1|(931,752)|
+1,47,41,11,0,0,43,0,2,0,0,-1--1--1,|12||0-0-0,1|(1036,517)|
+10,48,Cash Fallowing FR,881,532,43,27,8,131,0,0,0,0,0,0
+10,49,Cash to Food FR,855,451,45,25,8,131,0,0,0,0,0,0
+1,50,48,7,1,0,43,0,2,0,0,-1--1--1,|0||0-0-0,1|(769,506)|
+1,51,49,15,0,0,43,0,2,0,0,-1--1--1,|12||0-0-0,1|(846,417)|
+///---\\\
+:L<%^E!@
+1:Current.vdf
+9:Current
+22:$,Dollar,Dollars,$s
+22:Day,Days
+22:Hour,Hours
+22:Month,Months
+22:Person,People,Persons
+22:Unit,Units
+22:Week,Weeks
+22:Year,Years
+23:0
+15:0,0,0,0,0,0
+19:5,0
+27:2,
+34:0,
+4:Time
+5:Fallow
+35:Date
+36:YYYY-MM-DD
+37:2000
+38:1
+39:1
+40:0
+41:0
+42:0
+24:0
+25:10
+26:10
